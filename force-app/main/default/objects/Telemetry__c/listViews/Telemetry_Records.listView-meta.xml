@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Telemetry_Records</fullName>
+    <columns>NAME</columns>
+    <columns>Asset__c</columns>
+    <columns>Work_Order__c</columns>
+    <columns>Failure_Probability__c</columns>
+    <columns>Is_Failure__c</columns>
+    <columns>Vibration__c</columns>
+    <columns>SN_Incident_Number__c</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>SN_Incident_Number__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Telemetry Records</label>
+</ListView>

@@ -1,0 +1,93 @@
+.dashboard-container {
+    padding: 1rem;
+}
+
+/* HEALTH SECTION */
+.health-section {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Circular Score */
+.health-circle {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0070d2, #00a1e0);
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.health-small {
+    position: absolute;
+    bottom: 20px;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+/* Risk Badge */
+.risk-badge {
+    display: inline-block;
+    margin-top: 0.8rem;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.risk-high {
+    background-color: #fdecea;
+    color: #c23934;
+}
+
+.risk-medium {
+    background-color: #fff4e5;
+    color: #b76e00;
+}
+
+.risk-low {
+    background-color: #edf7ed;
+    color: #2e844a;
+}
+
+/* Sections */
+.section {
+    margin-top: 1.2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e5e5;
+}
+
+.section-title {
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: #16325c;
+}
+
+/* Rows */
+.field-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.6rem;
+}
+
+.field-value {
+    font-weight: 600;
+}
+
+/* Savings Highlight */
+.savings-row {
+    margin-top: 0.8rem;
+}
+
+.savings-value {
+    font-weight: 700;
+    color: #2e844a;
+    font-size: 1rem;
+}

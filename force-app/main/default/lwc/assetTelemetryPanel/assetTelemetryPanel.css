@@ -1,0 +1,31 @@
+.telemetry-container{
+    padding:12px;
+}
+
+.row{
+    padding:10px;
+    margin-bottom:8px;
+    border-radius:8px;
+    font-weight:600;
+    font-size:14px;
+}
+
+.temperature{
+    background:#ffe0b2;
+    color:#bf360c;
+}
+
+.vibration{
+    background:#bbdefb;
+    color:#0d47a1;
+}
+
+.probability{
+    background:#ffcdd2;
+    color:#b71c1c;
+}
+
+.timestamp{
+    background:#e1bee7;
+    color:#4a148c;
+}

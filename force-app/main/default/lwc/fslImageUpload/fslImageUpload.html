@@ -1,0 +1,47 @@
+<template>
+    <lightning-card title="Capture & Upload Image" icon-name="utility:photo">
+
+        <div class="slds-p-around_medium">
+
+            <!-- Capture -->
+            <lightning-input
+                type="file"
+                accept="image/*"
+                capture="environment"
+                label="Take Photo"
+                onchange={handleFileChange}>
+            </lightning-input>
+
+            <!-- Canvas -->
+            <template if:true={previewUrl}>
+                <div class="slds-m-top_medium">
+
+                    <canvas
+                        class="canvas"
+                        width="300"
+                        height="400"
+                        onmousedown={startDrawing}
+                        onmousemove={draw}
+                        onmouseup={stopDrawing}
+                        ontouchstart={startDrawing}
+                        ontouchmove={draw}
+                        ontouchend={stopDrawing}>
+                    </canvas>
+
+                    <!-- Buttons -->
+                    <div class="slds-m-top_small">
+                        <lightning-button label="Clear" onclick={clearCanvas}></lightning-button>
+                        <lightning-button variant="brand" label="Upload" onclick={handleUpload}></lightning-button>
+                    </div>
+
+                </div>
+            </template>
+
+            <template if:true={isLoading}>
+                <lightning-spinner></lightning-spinner>
+            </template>
+
+        </div>
+
+    </lightning-card>
+</template>

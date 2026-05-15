@@ -1,0 +1,33 @@
+<template>
+
+<lightning-card title="Telemetry Data" icon-name="utility:connected_apps">
+
+    <template if:true={telemetry}>
+        <template for:each={telemetry} for:item="t">
+
+            <div key={t.Id} class="telemetry-container">
+
+                <div class="row temperature">
+                    🌡 Temperature : {t.Temperature__c} °C
+                </div>
+
+                <div class="row vibration">
+                    📳 Vibration : {t.Vibration__c}
+                </div>
+
+                <div class="row probability">
+                    ⚠ Failure Probability : {t.formattedProbability} %
+                </div>
+
+                <div class="row timestamp">
+                    ⏱ Timestamp : {t.formattedTimestamp}
+                </div>
+
+            </div>
+
+        </template>
+    </template>
+
+</lightning-card>
+
+</template>

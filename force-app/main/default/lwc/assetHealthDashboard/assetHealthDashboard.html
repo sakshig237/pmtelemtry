@@ -1,0 +1,70 @@
+<template>
+    <lightning-card title="Asset Health Dashboard" icon-name="standard:asset">
+
+        <template if:true={healthData}>
+            <div class="dashboard-container">
+
+                <!-- HEALTH SECTION -->
+                <div class="health-section">
+
+                    <div class="health-circle">
+                        {healthData.healthScore}
+                        <div class="health-small">/100</div>
+                    </div>
+
+                    <div class={riskClass}>
+                        {healthData.riskLevel} Risk
+                    </div>
+
+                </div>
+
+                <!-- MACHINE INFO -->
+                <div class="section">
+                    <div class="section-title">Machine Information</div>
+
+                    <div class="field-row">
+                        <span>Machine Age</span>
+                        <span class="field-value">
+                            {healthData.machineAgeMonths} Months
+                        </span>
+                    </div>
+
+                    <div class="field-row">
+                        <span>Hours Since Service</span>
+                        <span class="field-value">
+                            {healthData.hoursSinceService}
+                        </span>
+                    </div>
+                </div>
+
+                <!-- COST INFO -->
+                <div class="section">
+                    <div class="section-title">Cost Analysis</div>
+
+                    <div class="field-row">
+                        <span>Reactive Cost</span>
+                        <span class="field-value">
+                            ₹{healthData.reactiveCost}
+                        </span>
+                    </div>
+
+                    <div class="field-row">
+                        <span>Predictive Cost</span>
+                        <span class="field-value">
+                            ₹{healthData.predictiveCost}
+                        </span>
+                    </div>
+
+                    <div class="field-row savings-row">
+                        <span>Cost Savings</span>
+                        <span class="savings-value">
+                            ₹{healthData.costSavings}
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </template>
+
+    </lightning-card>
+</template>

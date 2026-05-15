@@ -1,0 +1,66 @@
+<template>
+    <lightning-card title="Request Spare Part" icon-name="standard:product_request">
+        <div class="slds-p-around_medium">
+
+            <!-- Product Selection -->
+            <lightning-combobox
+            label="Select Spare Part"
+            value={productId}
+            options={productOptions}
+            onchange={handleProductChange}>
+        </lightning-combobox>
+
+
+            <!-- Quantity -->
+               
+<div class="slds-m-top_medium">
+    <label class="slds-form-element__label">Quantity</label>
+
+    <div class="quantity-container">
+
+        <!-- Decrease -->
+        <lightning-button-icon
+            icon-name="utility:dash"
+            alternative-text="Decrease"
+            onclick={decreaseQuantity}
+            class="qty-btn"
+            variant="border-filled">
+        </lightning-button-icon>
+
+        <!-- Value -->
+        <div class="qty-value">
+            {quantity}
+        </div>
+
+        <!-- Increase -->
+        <lightning-button-icon
+            icon-name="utility:add"
+            alternative-text="Increase"
+            onclick={increaseQuantity}
+            class="qty-btn"
+            variant="border-filled">
+        </lightning-button-icon>
+
+    </div>
+</div>
+
+
+            <!-- Button -->
+            <div class="slds-m-top_medium">
+                <lightning-button
+                    variant="brand"
+                    label="Request Part"
+                    onclick={handleRequest}>
+                </lightning-button>
+            </div>
+
+            <!-- Success Message -->
+            <template if:true={requestId}>
+                <div class="slds-m-top_medium slds-text-color_success">
+                    Request Created Successfully
+                </div>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

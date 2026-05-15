@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "path": "c:/Users/sakshi.g/Documents/LWC/pmtelemtry"
+    }
+  ],
+  "settings": {
+    "eslint.workingDirectories": [
+      "c:/Users/sakshi.g/Documents/LWC/pmtelemtry"
+    ],
+    "eslint.validate": [
+      "javascript",
+      "typescript"
+    ],
+    "eslint.options": {
+      "overrideConfigFile": "c:\\Users\\sakshi.g\\Documents\\LWC\\pmtelemtry\\.eslintrc.json"
+    }
+  }
+}
